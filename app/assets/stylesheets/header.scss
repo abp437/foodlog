@@ -1,6 +1,8 @@
+@import "variables";
+
 .shared-header {
   .fa-utensils {
-    color: #fff;
+    color: $white;
     width: 20px;
   }
 }
