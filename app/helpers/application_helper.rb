@@ -1,7 +1,7 @@
 module ApplicationHelper
-  def full_readable_date
+  def full_readable_date(date = DateTime.now)
     # Here %B stands for readable month
-    DateTime.now.to_date.strftime('%d %B, %Y')
+    date.to_date.strftime('%d %B, %Y')
   end
 
   def load_svg(path)
