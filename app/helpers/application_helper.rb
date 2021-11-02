@@ -1,11 +1,10 @@
 module ApplicationHelper
-  def full_readable_date(date = DateTime.now)
-    # Here %B stands for readable month
-    date.to_date.strftime('%d %B, %Y')
+  def formatted_readable_date(date = DateTime.now)
+    date.strftime(Entry.date_format)
   end
 
   def load_svg(path)
-    File.open("app/assets/images/svg/#{path}", "rb") do |file|
+    File.open("app/assets/images/svg/#{path}", 'rb') do |file|
       raw file.read
     end
   end

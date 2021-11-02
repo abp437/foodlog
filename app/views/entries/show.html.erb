@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  <%= @entry.meal_type %> - <%= full_readable_date(@entry.created_at) %>
+  <%= @entry.meal_type %> - <%= formatted_readable_date(@entry.created_at) %>
 <% end %>
 
 <div class="columns mt-6 is-centered">
@@ -11,15 +11,15 @@
       </div>
 
       <div class="panel-block">
-        Proteins: <%= @entry.proteins %>
+        Proteins: <%= @entry.proteins %>g
       </div>
 
       <div class="panel-block">
-        Carbohydrates: <%= @entry.carbohydrates %>
+        Carbohydrates: <%= @entry.carbohydrates %>g
       </div>
 
       <div class="panel-block">
-        Fats: <%= @entry.fats %>
+        Fats: <%= @entry.fats %>g
       </div>
     </nav>
 
