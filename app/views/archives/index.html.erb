@@ -6,7 +6,8 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="heading">Calories</p>
-            <!-- Pluck grabs a specified key from an array of hashes
+            <!--
+              Pluck grabs a specified key from an array of hashes
               Example:
               3.0.0 :029 > test_arr = [{test: 12, test2: 34}, { test: 23, test2: 56}]
               => [{:test=>12, :test2=>34}, {:test=>23, :test2=>56}]
@@ -16,7 +17,7 @@
               => 35
               3.0.0 :032 > test_arr.pluck(:test2).sum
               => 90
-             -->
+            -->
             <p class="title"><%= day_entries.pluck(:calories).sum %></p>
           </div>
         </div>
@@ -40,7 +41,7 @@
         </div>
       </nav>
       <% day_entries.each do |entry| %>
-        <%= link_to entry_path(entry) do %>
+        <%= link_to entry_path(entry), class: 'is-link' do %>
           <div class="card">
             <div class="card-content">
               <p class="has-text-weight-bold"><%= entry.meal_type %></p>
