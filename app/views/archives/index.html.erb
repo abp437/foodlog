@@ -1,11 +1,22 @@
-<div class="columns mt-6 is-centered">
+<div class="columns is-centered">
   <div class="column is-half">
     <% @entries.each do |day, day_entries| %>
-      <h3 class="is-size-4 has-text-weight-bold mb-4 text-centered">Entries for <%= day %></h3>
+      <h3 class="is-size-4 has-text-weight-bold mt-6 mb-4 text-centered">Entries for <%= day %></h3>
       <nav class="level is-mobile">
         <div class="level-item has-text-centered">
           <div>
             <p class="heading">Calories</p>
+            <!-- Pluck grabs a specified key from an array of hashes
+              Example:
+              3.0.0 :029 > test_arr = [{test: 12, test2: 34}, { test: 23, test2: 56}]
+              => [{:test=>12, :test2=>34}, {:test=>23, :test2=>56}]
+              3.0.0 :030 > test_arr.pluck(:test)
+              => [12, 23]
+              3.0.0 :031 > test_arr.pluck(:test).sum
+              => 35
+              3.0.0 :032 > test_arr.pluck(:test2).sum
+              => 90
+             -->
             <p class="title"><%= day_entries.pluck(:calories).sum %></p>
           </div>
         </div>
